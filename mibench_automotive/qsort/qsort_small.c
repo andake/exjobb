@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <regex.h>
 
 #define UNLIMIT
 #define MAXARRAY 6000 /* this number, if too large, will cause a seg. fault!! */
@@ -18,9 +19,31 @@ int compare(const void *elem1, const void *elem2)
   return (result < 0) ? 1 : ((result == 0) ? 0 : -1);
 }
 
+int regtest (char *argv){
+regex_t regex;
+int reti;
+char msgbuf[100];
 
-int
-main(int argc, char *argv[]) {
+/* Compile regular expression */
+        reti = regcomp(&regex, "..*\.dat", 0);
+        if( reti ){ fprintf(stderr, "Could not compile regex\n"); exit(1); }
+
+/* Execute regular expression */
+        reti = regexec(&regex, argv, 0, NULL, 0);
+        if( !reti ){
+                return 1;
+        }
+        else if( reti == REG_NOMATCH ){
+                return -1;
+        }
+        else{
+                regerror(reti, &regex, msgbuf, sizeof(msgbuf));
+                fprintf(stderr, "Regex match failed: %s\n", msgbuf);
+                exit(1);
+        }
+}
+
+int main(int argc, char *argv[]) {
   struct myStringStruct array[MAXARRAY];
   FILE *fp;
   int i,count=0;
@@ -30,9 +53,7 @@ main(int argc, char *argv[]) {
     exit(-1);
   }
   else {
-    printf("%s\n",argv[1]);
-    int ans = strcmp(argv[1], "input_small.dat");
-    if (ans != 0){
+    if (regtest(argv[1]) < 0){
         fprintf(stderr,"Usage: Only supports .dat files\n");
         exit(-1);
     }
