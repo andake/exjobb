@@ -30,6 +30,13 @@ main(int argc, char *argv[]) {
     exit(-1);
   }
   else {
+    printf("%s\n",argv[1]);
+    int ans = strcmp(argv[1], "input_small.dat");
+    if (ans != 0){
+        fprintf(stderr,"Usage: Only supports .dat files\n");
+        exit(-1);
+    }
+  
     fp = fopen(argv[1],"r");
     
     while((fscanf(fp, "%s", &array[count].qstring) == 1) && (count < MAXARRAY)) {
