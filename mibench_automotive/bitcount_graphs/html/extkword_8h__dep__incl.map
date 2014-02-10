@@ -1,0 +1,12 @@
+<map id="mibench_automotive/bitcount/extkword.h" name="mibench_automotive/bitcount/extkword.h">
+<area shape="rect" id="node2" href="$bitops_8h.html" title="mibench_automotive\l/bitcount/bitops.h" alt="" coords="661,97,800,138"/>
+<area shape="rect" id="node3" href="$bitarray_8c.html" title="mibench_automotive\l/bitcount/bitarray.c" alt="" coords="5,187,144,229"/>
+<area shape="rect" id="node4" href="$bitcnt__1_8c.html" title="mibench_automotive\l/bitcount/bitcnt_1.c" alt="" coords="169,187,308,229"/>
+<area shape="rect" id="node5" href="$bitcnt__2_8c.html" title="mibench_automotive\l/bitcount/bitcnt_2.c" alt="" coords="333,187,472,229"/>
+<area shape="rect" id="node6" href="$bitcnt__3_8c.html" title="mibench_automotive\l/bitcount/bitcnt_3.c" alt="" coords="497,187,636,229"/>
+<area shape="rect" id="node7" href="$bitcnt__4_8c.html" title="mibench_automotive\l/bitcount/bitcnt_4.c" alt="" coords="661,187,800,229"/>
+<area shape="rect" id="node8" href="$bitcnts_8c.html" title="mibench_automotive\l/bitcount/bitcnts.c" alt="" coords="825,187,964,229"/>
+<area shape="rect" id="node9" href="$bitfiles_8c.html" title="mibench_automotive\l/bitcount/bitfiles.c" alt="" coords="989,187,1128,229"/>
+<area shape="rect" id="node10" href="$bitstrng_8c.html" title="mibench_automotive\l/bitcount/bitstrng.c" alt="" coords="1153,187,1292,229"/>
+<area shape="rect" id="node11" href="$bstr__i_8c.html" title="mibench_automotive\l/bitcount/bstr_i.c" alt="" coords="1317,187,1456,229"/>
+</map>
