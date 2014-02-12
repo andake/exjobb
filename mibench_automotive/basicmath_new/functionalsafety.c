@@ -26,11 +26,12 @@ void init (int functionnumber){
         arg2.maxvalue = 2002;
         arg2.next = &arg3;
         
-        arg3.minvalue = 3;
-        arg3.maxvalue = 3003;
+
+        arg3.minvalue = -300;
+        arg3.maxvalue = 3000;
         arg3.next = &arg4;
         
-        arg4.minvalue = 4;
+        arg4.minvalue = -10000;
         arg4.maxvalue = 4000;
         arg4.next = NULL;
         
