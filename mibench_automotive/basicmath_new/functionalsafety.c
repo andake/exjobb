@@ -19,15 +19,15 @@ void init (int functionnumber){
     case 0:
         //****** basicmath_small *************    
         arg1.minvalue = 1;
-        arg1.maxvalue = 1000;
+        arg1.maxvalue = 1001;
         arg1.next = &arg2;
          
         arg2.minvalue = 2;
-        arg2.maxvalue = 2000;
+        arg2.maxvalue = 2002;
         arg2.next = &arg3;
         
         arg3.minvalue = 3;
-        arg3.maxvalue = 3000;
+        arg3.maxvalue = 3003;
         arg3.next = &arg4;
         
         arg4.minvalue = 4;
