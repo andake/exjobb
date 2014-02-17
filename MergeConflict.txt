@@ -1,0 +1,6 @@
+1. Fixa i filen.
+2. git rebase --continue
+3. git add mibench_automotive/...
+4. git rebase --continue
+5. git push
+6. git push 

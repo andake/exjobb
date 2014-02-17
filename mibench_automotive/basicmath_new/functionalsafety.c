@@ -18,21 +18,21 @@ void init (int functionnumber){
     switch (functionnumber){
     case 0:
         //****** basicmath_small *************    
-        arg1.minvalue = 1;
-        arg1.maxvalue = 1001;
+        arg1.minvalue = -987654321;
+        arg1.maxvalue = 987654321;
         arg1.next = &arg2;
          
-        arg2.minvalue = 2;
-        arg2.maxvalue = 2002;
+        arg2.minvalue = -987654321;
+        arg2.maxvalue = 987654321;
         arg2.next = &arg3;
         
 
-        arg3.minvalue = -300;
-        arg3.maxvalue = 3000;
+        arg3.minvalue = -987654321;
+        arg3.maxvalue = 987654321;
         arg3.next = &arg4;
         
-        arg4.minvalue = -10000;
-        arg4.maxvalue = 4000;
+        arg4.minvalue = -987654321;
+        arg4.maxvalue = 987654321;
         arg4.next = NULL;
         
         functionlimits[0] = arg1;
@@ -58,17 +58,17 @@ int functionalsafety(int (*function)(int,int,int,int), int functionnumber, int a
     do{
         printf("%d < %d < %d\n",arglimits.minvalue, arg[i-1],arglimits.maxvalue);
         if (arg[i-1]<arglimits.minvalue){
-            fprintf(stderr, "Argument %d for function number %d is to small.\n", i ,functionnumber);
+            //fprintf(stderr, "Argument %d for function number %d is to small.\n", i ,functionnumber);
             tosmallerror++;
         }
         if (arg[i-1]>arglimits.maxvalue){
-            fprintf(stderr, "Argument %d for function number %d is to large.\n", i ,functionnumber);
+            //fprintf(stderr, "Argument %d for function number %d is to large.\n", i ,functionnumber);
             tolargeerror++;
         }
         i++;
         if (arglimits.next != NULL){
             arglimits = *arglimits.next;
-            printf("Change to argument %d\n",i);
+            //printf("Change to argument %d\n",i);
             }
         else{
             break;

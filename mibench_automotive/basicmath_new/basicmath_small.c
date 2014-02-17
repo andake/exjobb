@@ -8,14 +8,21 @@
 int math(int, int, int, int);
 int args[] = {10, -105, 320, -300};
 
-int main(void)
+int main(int argc, char *argv[])
 {
     init(0);
     int (*foo)(int, int, int, int);
     foo = &math;
+
+    args[0] = *(int*)argv[1];
+    args[1] = *(int*)argv[2];
+    args[2] = *(int*)argv[3];
+    args[3] = *(int*)argv[4];
+
     functionalsafety(foo, 0, args);
     result();
-    return 0;
+
+    return (tolargeerror + tosmallerror);
 }
 
 int math (int a, int b, int c, int d){
@@ -27,17 +34,17 @@ int math (int a, int b, int c, int d){
     struct int_sqrt q;
     long n = 0;
 
-    /* solve some cubic functions */
+    // solve some cubic functions //
     printf("********* CUBIC FUNCTIONS ***********\n");
-    /* should get 3 solutions: 2, 6 & 2.5   */
+    // should get 3 solutions: 2, 6 & 2.5   
     SolveCubic(a, b, c, d, &solutions, x);  
     printf("Solutions:");
     for(i=0;i<solutions;i++)
     printf(" %f",x[i]);
     printf("\n");
-    /* should get 1 solution: 2.5           */
-    
-    /* Now solve some random equations */
+    // should get 1 solution: 2.5           
+}/*    
+    // Now solve some random equations
     for(a=10;a<100;a+=10) {
     for(b=100;b>0;b-=10) {
       for(c=50;c<150;c+=5) {//was +.5 before
@@ -53,7 +60,7 @@ int math (int a, int b, int c, int d){
     }
 
     printf("********* INTEGER SQR ROOTS ***********\n");
-    /* perform some integer square roots */
+    // perform some integer square roots
     for (i = 0; i < 1001; ++i)
     {
       usqrt(i, &q);
@@ -68,7 +75,7 @@ int math (int a, int b, int c, int d){
 
 
     printf("********* ANGLE CONVERSION ***********\n");
-    /* convert some rads to degrees */
+    // convert some rads to degrees 
     for (X = 0.0; X <= 360.0; X += 1.0)
     printf("%3.0f degrees = %.12f radians\n", X, deg2rad(X));
     puts("");
@@ -77,4 +84,4 @@ int math (int a, int b, int c, int d){
 
 
     return 0;
-}
+}*/
