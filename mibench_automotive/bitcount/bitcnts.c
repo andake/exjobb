@@ -49,6 +49,8 @@ int main(int argc, char *argv[])
     fprintf(stderr,"Usage: bitcnts <iterations>\n");
     exit(-1);
 	}
+	
+	printf("%d\n", *(long *)argv[2]);
   iterations=atoi(argv[1]);
   
   puts("Bit counter algorithm benchmark\n");
@@ -56,7 +58,8 @@ int main(int argc, char *argv[])
   for (i = 0; i < FUNCS; i++) {
     start = clock();
     
-    for (j = n = 0, seed = rand(); j < iterations; j++, seed += 13)
+    //for (j = n = 0, seed = rand(); j < iterations; j++, seed += 13)
+	for (j = n = 0, seed = *(long *)argv[2]; j < iterations; j++, seed += 13)
 	 n += pBitCntFunc[i](seed);
     
     stop = clock();
